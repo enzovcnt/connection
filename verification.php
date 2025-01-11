@@ -16,18 +16,14 @@ $users = [
     "patricia"=> "surf"
 ];
 
-if (!$username)
-{
-    header("location: index.php");
-    die;
-}
+
 
 
 if (array_key_exists($username, $users) && $users[$username] === $password) //vérifie que le username existe et que la valeur attribué au username est la même que le mot de passe
 {
     header("location: resultat.php");
 }
-
+else header("location: index.php");
 
 
 
